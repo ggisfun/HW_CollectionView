@@ -7,16 +7,12 @@
 
 import UIKit
 
-//private let reuseIdentifier = "Cell"
-
 class BGCollectionViewController: UICollectionViewController {
 
     let moneyArray = (0...20).map { Rich(name: "財富自由\($0)", image: "pic\($0)") }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         configureCellSize()
     }
