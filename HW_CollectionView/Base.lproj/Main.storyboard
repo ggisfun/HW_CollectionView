@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23077.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hf0-w6-PEL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23068.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--財富自由照片牆-->
+        <scene sceneID="6FQ-3b-HAK">
+            <objects>
+                <collectionViewController id="C47-Iq-LiZ" customClass="MoneyCollectionViewController" customModule="HW_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="blJ-7b-28X">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oGv-1W-Re4">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MoneyCollectionViewCell" id="FwQ-Xi-fd9" customClass="MoneyCollectionViewCell" customModule="HW_CollectionView" customModuleProvider="target">
+                                <rect key="frame" x="-443.66666666666669" y="0.0" width="1280" height="853"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oeT-ku-aE7">
+                                    <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic0" translatesAutoresizingMaskIntoConstraints="NO" id="QPl-cU-05x">
+                                            <rect key="frame" x="0.0" y="0.0" width="1280" height="853"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="QPl-cU-05x" secondAttribute="trailing" id="HLC-Ps-w2z"/>
+                                        <constraint firstItem="QPl-cU-05x" firstAttribute="top" secondItem="oeT-ku-aE7" secondAttribute="top" id="f2b-Tl-HYG"/>
+                                        <constraint firstAttribute="bottom" secondItem="QPl-cU-05x" secondAttribute="bottom" id="iUV-Y6-rw0"/>
+                                        <constraint firstItem="QPl-cU-05x" firstAttribute="leading" secondItem="oeT-ku-aE7" secondAttribute="leading" id="xLR-qn-ImW"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="moneyImageView" destination="QPl-cU-05x" id="MHV-ad-nYB"/>
+                                    <segue destination="y62-v0-Wgo" kind="show" destinationCreationSelector="showMoneyImg:" id="NCR-N3-Gll"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="C47-Iq-LiZ" id="Lt9-lu-YNS"/>
+                            <outlet property="delegate" destination="C47-Iq-LiZ" id="toW-0c-nk9"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="財富自由照片牆" id="45V-yk-xO8"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eka-nI-yOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702" y="4"/>
+        </scene>
+        <!--Money View Controller-->
+        <scene sceneID="7Td-9f-LHr">
+            <objects>
+                <viewController id="y62-v0-Wgo" customClass="MoneyViewController" customModule="HW_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qNX-Lb-J6f">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yXE-vv-wON">
+                                <rect key="frame" x="0.0" y="282" width="393" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="65b-OG-Qf0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qnu-8V-2W5"/>
+                    <connections>
+                        <outlet property="moneyImageView" destination="yXE-vv-wON" id="Sad-fH-1f7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XBv-JH-1XZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2707.6335877862593" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rri-cm-hV9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Cc-Fa-WTO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QOF-qy-hHf">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C47-Iq-LiZ" kind="relationship" relationship="rootViewController" id="Z1N-fM-Nca"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RPH-kX-oq0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881.67938931297704" y="3.5211267605633805"/>
+        </scene>
+        <!--Hori Money View Controller-->
+        <scene sceneID="7gS-eB-jAC">
+            <objects>
+                <viewController id="5UV-gT-MHM" customClass="HoriMoneyViewController" customModule="HW_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2qZ-Xh-n2T">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EFq-MG-uJ1">
+                                <rect key="frame" x="10" y="69" width="373" height="373"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EFq-MG-uJ1" secondAttribute="height" multiplier="1:1" id="IZE-K9-9EN"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="EE1-aS-fEr">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HoriMoneyCollectionViewCell" id="6hz-3P-TOf" customClass="HoriMoneyCollectionViewCell" customModule="HW_CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wQi-R2-Por">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic0" translatesAutoresizingMaskIntoConstraints="NO" id="LMF-0v-cxu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="LMF-0v-cxu" secondAttribute="bottom" id="EtS-xY-Oue"/>
+                                                <constraint firstItem="LMF-0v-cxu" firstAttribute="top" secondItem="wQi-R2-Por" secondAttribute="top" id="nEX-ce-h7y"/>
+                                                <constraint firstAttribute="trailing" secondItem="LMF-0v-cxu" secondAttribute="trailing" id="oSU-bH-O7i"/>
+                                                <constraint firstItem="LMF-0v-cxu" firstAttribute="leading" secondItem="wQi-R2-Por" secondAttribute="leading" id="q68-yr-X5n"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="moneyImageView" destination="LMF-0v-cxu" id="Fqe-ri-qF7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="5UV-gT-MHM" id="FJ2-aA-t5k"/>
+                                    <outlet property="delegate" destination="5UV-gT-MHM" id="KyA-XR-ofg"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cgM-hB-TBA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EFq-MG-uJ1" firstAttribute="leading" secondItem="cgM-hB-TBA" secondAttribute="leading" constant="10" id="Qhl-7Q-oWX"/>
+                            <constraint firstItem="cgM-hB-TBA" firstAttribute="trailing" secondItem="EFq-MG-uJ1" secondAttribute="trailing" constant="10" id="u5q-m6-Q8b"/>
+                            <constraint firstItem="EFq-MG-uJ1" firstAttribute="top" secondItem="cgM-hB-TBA" secondAttribute="top" constant="10" id="zei-Dy-g3d"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="HoriMoneyCollectionView" destination="EFq-MG-uJ1" id="Fjs-sm-5JG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0IA-9j-MTZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866.41221374045801" y="691.54929577464793"/>
+        </scene>
+        <!--財富自由照片牆-->
+        <scene sceneID="Ylq-LL-sp3">
+            <objects>
+                <collectionViewController id="UtE-LR-eOU" customClass="BGCollectionViewController" customModule="HW_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rrz-dh-kfF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lt8-0i-yxb">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="3fh-az-fAw">
+                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SfN-Yv-ld2">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <segue destination="RpJ-fq-exE" kind="show" destinationCreationSelector="showMoneyImg:" id="K9Q-KR-0Ge"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="UtE-LR-eOU" id="Sbd-yY-hwA"/>
+                            <outlet property="delegate" destination="UtE-LR-eOU" id="KoQ-Qe-KBC"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="財富自由照片牆" id="7t7-bP-agj"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RTi-rZ-d2d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1799.2366412213739" y="1442.9577464788733"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8wm-Xx-OBZ">
+            <objects>
+                <viewController id="RpJ-fq-exE" customClass="BGViewController" customModule="HW_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="niN-cl-dX6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pId-5D-uWh">
+                                <rect key="frame" x="0.0" y="282" width="393" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="46u-fe-0dY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="e3v-1t-eBD"/>
+                    <connections>
+                        <outlet property="moneyImageView" destination="pId-5D-uWh" id="rqh-8V-u6s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uoe-uS-djm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2731" y="1443"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ge3-1s-PFZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eGP-4K-5vO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rWv-fS-9uF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="UtE-LR-eOU" kind="relationship" relationship="rootViewController" id="PiR-TG-wYQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M2Z-np-Qud" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.51908396946567" y="1442.9577464788733"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="awq-Qp-0c8">
+            <objects>
+                <collectionViewController id="hf0-w6-PEL" customClass="BGHCollectionViewController" customModule="HW_CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="Syl-Qq-Ci5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MtK-ah-YPt">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="SWc-VH-EPQ">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XLP-7a-jo7">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="hf0-w6-PEL" id="sUZ-RP-d5Z"/>
+                            <outlet property="delegate" destination="hf0-w6-PEL" id="NiD-gv-T91"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8kv-ef-fBv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="2122"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pic0" width="1280" height="853"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
